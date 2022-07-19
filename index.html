@@ -320,20 +320,20 @@
         <li>
           <a class="clients-list" href="#">
             <svg class="icon-clients">
-              <use href="./images/icons.svg#icon-Logo-6"></use>
+              <use href="./images/icons.svg#icon-Logo-4"></use>
             </svg>
           </a>
         <li>
           <a class="clients-list" href="#">
             <svg class="icon-clients">
-              <use href="./images/icons.svg#icon-Logo-4"></use>
+              <use href="./images/icons.svg#icon-Logo-5"></use>
             </svg>
           </a>
         </li>
         <li>
           <a class="clients-list" href="#">
             <svg class="icon-clients">
-              <use href="./images/icons.svg#icon-Logo-5"></use>
+              <use href="./images/icons.svg#icon-Logo-6"></use>
             </svg>
           </a>
         </li>
@@ -386,19 +386,83 @@
                 <use href="./images/icons.svg#icon-linkedin"></use>
               </svg>
             </a>
-          </li>
-        </ul>
       </div>
+      <div class="sent-email">
+        <form class="footer-form">
+          <label class="form-footer-label" for="user-email">Подпишись на рассылку</label>
+          <input class="form-footer-input" type="email" id="user-email" name="user-email" placeholder="E-mail">
+          <button class="button-footer" type="submit">Подписаться
+            <svg class="icon-send-email" width="24px" height="24px">
+              <use href="./images/icons.svg#icon-icon-send1"></use>
+            </svg>
+          </button>
+      </div>
+      </form>
+      </li>
+      </ul>
     </div>
+
   </footer>
 
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <button class="modal-button" type="button" data-modal-close>
+      <button class="modal-close" type="button" data-modal-close>
         <svg class="icon-socials" width="11" height="11">
-          <use href="./images/icons.svg#icon-Vector-3"></use>
+          <use href="./images/icons.svg#icon-vector-3"></use>
         </svg>
       </button>
+      <div class="modal-inner">
+        <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <form class="modal-form">
+          <div class="form-field">
+            <label class="form-field-label" for="user-name">Имя</label>
+            <div class="form-field-inner">
+              <input class="form-field-input" type="text" id="user-name" name="user-name">
+              <svg class="icon-modal" width="12" height="12">
+                <use href="./images/icons.svg#icon-vector-5"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-field">
+            <label class="form-field-label" for="user-tel">Телефон</label>
+            <div class="form-field-inner">
+              <input class="form-field-input" type="tel" id="user-tel" name="user-tel">
+              <svg class="icon-modal" width="12" height="12">
+                <use href="./images/icons.svg#icon-vector-4"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-field">
+            <label class="form-field-label" for="user-email">Почта</label>
+            <div class="form-field-inner">
+              <input class="form-field-input" type="email" id="user-email" name="user-email">
+              <svg class="icon-modal" width="12" height="12">
+                <use href="./images/icons.svg#icon-vector-8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-field">
+            <label class="form-field-label" for="user-comment">Комментарий</label>
+            <textarea class="form-field-input textarea" name="user-comment" id="user-comment" cols="" rows="7"
+              placeholder="Введите текст"></textarea>
+          </div>
+
+          <div class="form-field-checkbox">
+            <label class="checkbox-label" for="terms-conditions">
+              Соглашаюсь с рассылкой и принимаю <a class="agreement" href="#"> Условия договора</a>
+              <input class="checkbox" type="checkbox" id="terms-conditions" name="terms-conditions">
+              <svg class="icon-box" width="15" height="15">
+                <use href="./images/icons.svg#icon-vector-6"></use>
+              </svg>
+              <svg class="icon-checkbox" width="16" height="15">
+                <use href="./images/icons.svg#icon-icon-check"></use>
+              </svg>
+            </label>
+          </div>
+
+          <button class="modal-button" type="submit">Отправить</button>
+        </form>
+      </div>
     </div>
   </div>
 

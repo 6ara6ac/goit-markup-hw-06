@@ -452,7 +452,7 @@ p {
 }
 
 .links-title {
-  margin-top: 15px;
+  margin-top: 12px;
   margin-bottom: 20px;
 
   text-transform: uppercase;
@@ -473,6 +473,68 @@ p {
   border-radius: 50%;
   fill: #fff;
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-footer-label {
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 12px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.form-footer-input {
+  margin-right: 12px;
+
+  padding: 15px 16px;
+  width: 357px;
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  font-size: 14px;
+  line-height: 1.25;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button-footer {
+  display: inline-flex;
+  min-width: 200px;
+  min-height: 50px;
+  padding: 10px 29px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: inherit;
+  background-color: var(--accient-color);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  border: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 1.19;
+  letter-spacing: 0.06em;
+  gap: 10px;
+  cursor: pointer;
+
+  fill: #fff;
+}
+
+.icon-send-email {
+  width: 24px;
+  height: 24px;
 }
 
 /* Filtres */
@@ -620,6 +682,148 @@ p {
   transform: scale(2);
 }
 
+/* Form field */
+
+.form-field-inner {
+  position: relative;
+}
+
+.form-field-label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.form-field-input {
+  resize: none;
+  padding: 12px 42px 12px;
+
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+}
+
+.form-field-input:hover,
+.form-field-input.textarea:hover {
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+  fill: var(--accient-color);
+}
+
+.form-field-input:focus + .icon-modal {
+  fill: var(--accient-color);
+}
+
+.form-field-input.textarea {
+  resize: none;
+  padding: 12px 16px 12px;
+
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.icon-modal {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  fill: #212121;
+  transition: 250ms var(--timing-function);
+}
+
+/* checkbox */
+
+.form-field-checkbox {
+  position: relative;
+  margin-left: 14px;
+  margin-top: 20px;
+}
+
+.checkbox-label {
+  margin-left: 23px;
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+}
+
+.checkbox-total {
+  display: flex;
+  position: relative;
+}
+
+.icon-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.icon-checkbox {
+  position: absolute;
+  fill: #fff;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+
+  transition: 250ms var(--timing-function);
+}
+
+.checkbox:checked ~ .icon-checkbox {
+  background-color: var(--accient-color);
+  background-size: contain;
+  background-origin: border-box;
+  appearance: initial;
+  opacity: 1;
+  border-radius: 2px;
+}
+
+.modal-button {
+  display: flex;
+  min-width: 200px;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: inherit;
+  background-color: var(--accient-color);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  border: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 1.19;
+  letter-spacing: 0.06em;
+}
+
+.agreement {
+  text-decoration: underline;
+}
+
+/* Modal window */
+
 .modal {
   position: absolute;
   top: 50%;
@@ -635,7 +839,9 @@ p {
   border-radius: 4px;
 }
 
-.modal-button {
+.modal-close {
+  transition: 250ms var(--timing-function);
+
   position: absolute;
   right: 0;
   border-radius: 50%;
@@ -648,4 +854,23 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.1);
   fill: #000000;
   cursor: pointer;
+}
+
+.modal-close:hover {
+  fill: var(--accient-color);
+}
+
+.modal-inner {
+  padding: 40px;
+}
+
+.modal-title {
+  margin-bottom: 30px;
+
+  color: var(--title-color);
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  font-weight: 700;
 }
